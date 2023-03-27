@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin-Smarthousie</title>
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/Admin1.css">
+  <link rel="stylesheet" href="assets/css/token_panel.css">
+  <script>
+    $(document).ready(function () {
+      $('#main_container_admin').load('admin_home.html')
+    })
+    var gdata;
+    var all_arr;
+    var arrive_token=[];
+    var promo;
+    var intgration;
+    var current_num
+  </script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name"><img src="images/Frame_9-removebg-preview.png" alt="" width="100%"></span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a class="active" onclick="$('#main_container_admin').load('admin_home.html')">
+          <i class='bx bxs-home'></i>
+          <span class="links_name"> Home</span>
+        </a>
+      </li>
+      <li>
+        <a onclick="$('#main_container_admin').load('current_page.html')">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a onclick="$('#main_container_admin').load('token_panel.html')">
+          <i class='bx bx-outline'></i>
+          <span class="links_name">Token</span>
+        </a>
+      </li>
+
+      <li class="log_out">
+        <a href="#">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main_container_admin" id="main_container_admin">
+
+  </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
