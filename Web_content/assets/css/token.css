@@ -1,0 +1,66 @@
+
+body{
+    width: 100%;
+    margin: auto;
+  }
+  .logo{
+    text-align: center;
+    margin-top: 25px;
+  }
+  .circle{
+    width: 100%;
+    max-width: 560px;
+    margin-top: 10px;
+  }
+ .bell-icon{
+  margin-top: 35px;
+  margin-left: 30%;
+ }
+
+  
+  .circle ul {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .circle ul li {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    display: block;
+    border: 2px solid brown;
+    margin: ;
+    text-align: center;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  
+  .ticket {
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    
+  }
+  
+  .circle ul li .btn-circle{
+    border: none;
+    
+    padding: 6px 0px;
+    border-radius: 100%;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+
+  

@@ -1,0 +1,139 @@
+
+          
+body{
+  width: 100%;
+  margin:auto ;
+}
+.ticket{
+  border: 2px solid navy;
+}
+.border{
+  margin: 4px 4px 4px 4px;
+  border: 2px solid navy;
+}
+.logo{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+h3{
+   
+  left: 61px;
+  top: 105px;
+  
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 28px;
+  
+  color: #000000;
+  text-align: center;
+
+}
+p{
+    
+  left: 3px;
+  top: 130px;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-right:300px;
+  color: #646464;
+  margin-top:0;
+  text-decoration: underline;
+}
+.circle{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.circle ul {
+  padding: 10px 0px 10px 0px;
+  margin: 15px auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 416px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid grey;
+  border-radius: 10px;
+  /*background-image: linear-gradient(palegoldenrod, peru);*/
+  /*background-color: palegreen;*/
+  
+}
+#ticket1{
+  
+  background-color: #F5F5DC;
+}
+#ticket2{
+ background-color: #ECFFDC;
+  
+}
+#ticket3{
+ background-color:#FFFAA0;
+}
+
+
+.circle ul li {
+  width: 40px; 
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  background: #FBB500;
+  border-radius: 100%;
+  margin: 5px 2px;
+  text-align: center;
+}
+
+.ticket {
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.circle ul li .btn-circle{
+  border: none;
+  background: #FBB500;
+  padding: 6px 0px;
+  border-radius: 100%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+
+
+
+@media (max-width:444px){
+
+  .circle ul li {
+    width: 9vw;
+    height: 9vw;
+  }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

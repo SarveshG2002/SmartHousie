@@ -1,0 +1,323 @@
+
+body{
+  width: 100%;
+  
+  margin: auto;
+}
+.logo{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.circle{
+  text-align: center;
+  margin-top: 15px;
+  
+}
+#log-img{
+}
+/*.border{
+  border: 2px solid navy;
+  margin: 4px 4px 4px 4px;
+}*/
+
+.circle ul {
+  margin: auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 390px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ECFFDC;
+ /* border: 2px solid brown;*/
+  border-radius: 10px;
+}
+
+.circle ul li {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  
+  border: 2px solid brown;
+  margin: 1px;
+}
+.yellow{
+  background-color: yellow;
+}
+
+.ticket {
+  background: url('63.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  /*border: 2px solid navy;*/
+}
+
+.circle ul li .btn-circle{
+  border: none;
+  
+  padding: 6px 0px;
+  border-radius: 100%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.show-area {
+  margin-top: 50px;
+  
+}
+
+#slideshow {
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  margin:  0px auto;
+}
+
+.slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 10s ease infinite;
+}
+
+.slide {
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+}
+
+
+@-webkit-keyframes slide {
+  20% {margin-left: -128px;}
+  30% {margin-left: -228px;}
+  40% {margin-left: -328px;}
+  50% {margin-left: -428px;}
+  60% {margin-left: -528px;}
+  70% {margin-left: -628px;}
+  80% {margin-left: -728px;}
+  90% {margin-left: -828px;}
+  100% {margin-left: -928px;}
+}
+
+
+
+
+
+.play-btn {
+  display: block;
+  height: 86px;
+
+ /* background:khaki ;
+  border-radius: 35px;
+  border: 7px solid #FEBE10;*/
+  max-width: 296px;
+  width: 100%;
+  margin: 0 auto 50px;
+  margin-top: 20px;
+  background: none;
+  border: none;
+}
+.play img{
+  overflow: hidden;
+}
+
+.play-btn button {
+  width: 100%;
+  border: none;
+  color: #FEBE10  ;
+  cursor: pointer;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: 0em;
+  background: none;
+  border: none;
+  padding: 12px 0 28px;
+}
+
+
+
+.no-wraps {
+  position: relative;
+}
+
+@media (max-width:480px){
+
+  .wrapper {
+    display: flex;
+    padding: 2px;
+    margin: auto;
+    margin-top: 40%;
+  }
+  .circle ul{
+    max-width: 355px;
+  }
+
+}
+
+
+@media (max-width:444px){
+
+  .circle ul li {
+    width: 9vw;
+    height: 9vw;
+  }
+  .circle ul{
+    max-width: 355px;
+  }
+
+} 
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+body{
+  background:#eeeee;
+}
+
+#slideshow{
+  margin: 0 auto;
+  width:100%;
+  overflow:hidden;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+.slides img{
+  width:50%;
+  background: none;
+  border: none;
+}
+
+#dot{
+  margin:0 auto;
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  border-radius:50%;
+  background:#d3d3d3;
+  padding:8px;
+  margin:10px 5px;
+}
+
+.active{
+  background:black;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+  .circle ul{
+    max-width: 355px;
+  }
+}
+@media (max-width:740px){
+  .circle ul{
+    max-width: 355px;
+  }
+}
+
+#heading{
+  display:block;
+  text-align:center;
+  font-size:2em;
+  margin:10px 0px;
+
+}
+.AT-btn{
+  display: inline-flex;
+  margin-top: 20px;
+}
+.AT-btn button{
+  display: inline;
+  background: none;
+  border: none;
+}
+#token-btn{
+  background: none;
+  border: none;
+ 
+  margin-left: 10%;
+}
+#award-btn{
+  float: right;
+  background: none;
+  border: none;
+  margin-left: 51%;
+}
+#claimp{
+  margin-left: 40%;
+  margin-top: 20%;
+}
+.AT-btn button img{
+  background: none;
+  border: none;
+}
+
+#sponsor-img{
+  margin-top: 15%;
+}
+.bell-icon{
+  display: inline-flex;
+  width: 100%;
+}
+#bell{
+  float: right;
+  margin-left: 85%;
+  background: none;
+  border: none;
+}
+#i-icon{
+  background: none;
+  border: none;
+  
+}
+
+.cur_token{
+  margin: 10px auto;
+  background-color: #eee;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+     
+    
+  
+        

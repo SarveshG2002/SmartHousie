@@ -1,0 +1,94 @@
+body {
+    margin: 0px;
+}
+
+.mobile {
+    width: 450px;
+    margin: 0px auto;
+    /* background-color: antiquewhite; */
+    background: url('/DemoApp/assets/css/63.jpg');
+    background-size: 100% 100%;
+}
+
+.smartLogo img {
+    margin: 20px 0px;
+}
+
+.bell_info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.bi {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.bi img {
+    width: 100%;
+}
+
+.ticket {
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    
+}
+
+.tbox {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: ridge;
+    text-align: center;
+    border-color: #761800;
+}
+
+.y {
+    background-color: #ffc700;
+}
+
+.w {
+    background-color: #ffffff;
+}
+
+.slides {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+.cur_token {
+    margin: 10px auto;
+    background-color: #eee;
+    padding: 5px 10px;
+    width: fit-content;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.play-btn button {
+    width: 100%;
+    border: none;
+    color: #fe1010;
+    cursor: pointer;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 45px;
+    letter-spacing: 0em;
+    background: none;
+    border: none;
+    padding: 12px 0 28px;
+}
+.token_award{
+    width: 100%;
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
