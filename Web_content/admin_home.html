@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-wifi-0'></i>
+            <span class="dashboard"><b>Home</b></span>
+          </div>
+          <div class="profile-details">
+            <span class="admin_name"></span>
+          </div>
+        </nav>
+        <div class="home-content">
+          <div class="formcontainer">
+            <form id="myform">
+              NAME OF COMPANY : <input class="form-control" type="text" name="cname" size="50">
+  
+              CREATE PROMO CODE : <input class="form-control" type="text" name="promo" size="50">
+  
+              FULL HOUSIE AT NUMBER : <input class="form-control" type="text" name="housienum" size="50">
+  
+              AWARDS : <table class="table">
+                <tr>
+                  <th>Awards</th>
+                  <th>Click</th>
+                </tr>
+                <tr>
+                  <td> 4 Corners</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> 1st Five</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> 1st Line</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> 2nd Line</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> 3rd Line</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> Full House 1</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> Full House 2</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td> Full House 3</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+              </table><br>
+  
+              <div class="form-inline text-right">
+                <div class="form-group">
+                  START TIME : <input class="form-control" type="time" name="stime">
+                  END TIME : <input class="form-control" type="time" name="etime">
+                </div>
+  
+                NUMBER OF TICKETS TO CREATE : <input class="form-control" type="text" name="players" size="50">
+                <div class="form-group">
+                  DURATION BETWEEN TWO NUMBERS : <input class="form-control" type="text" name="duration" size="50"
+                    id="flex"><select class="select">
+                    <option value="">select</option>
+                    <option value="">In Second</option>
+                    <option value="">In Minute</option>
+                    <option value="">In Hour</option>
+                  </select>
+                </div>
+  
+                <div class="back_option">
+  
+                  Choose your theme: <select name="back" id="back" class="form-control" onchange="changeimg()">
+                    <option value="61" class="form-control">Background 1</option>
+                    <option value="62" class="form-control">Background 2</option>
+                    <option value="63" class="form-control">Background 3</option>
+                    <option value="64" class="form-control">Background 4</option>
+                    <option value="65" class="form-control">Background 5</option>
+                    <option value="66" class="form-control">Background 6</option>
+                    <option value="67" class="form-control">Background 7</option>
+                    <option value="custom" class="form-control">Custom</option>
+                  </select><br><br>
+
+                  <div id="custome_div" style="display: none;">
+                    <label for="logo">Choose your custome background: </label><input class="form-control" type="file" name="userBack" id="userBack"><br>
+                    <div style="color: red;font-size: 13px;">note: background image should be compatible to mobile view</div>
+                    <br><br>
+                  </div>
+
+                  <div class="demo_panel">
+                    <img src="images/61.png" alt="" srcset="" style="width: 100%;" id="demo_img">
+                  </div>
+                </div><br><br><br>
+  
+                COMPANY LOGO : <input class="form-control" type="file" name="logo"><br>
+                <div>BRAND LOGO FOR SCROLL :
+                  <div class="imgblock">
+  
+                    <div class="block">
+  
+  
+                      <img width="150" height="100" src="images/choose.jpg" id="newimg" accept="image/png, image/jpeg"
+                        onerror="this.src='img/500_300.png'">
+                      <input type="file" name="blogo1" id="inpimg">
+                    </div>
+                    <div class="block">
+                      <img width="150" height="100" src="images/choose.jpg" id="newimg2" accept="image/png, image/jpeg"
+                        onerror="this.src='img/500_300.png '">
+                      <input type="file" name="blogo2" id="inpimg2">
+                    </div>
+                    <div class="block">
+                      <img width="150" height="100" src="images/choose.jpg" id="newimg3" accept="image/png, image/jpeg"
+                        onerror="this.src='img/500_300.png'">
+                      <input type="file" name="blogo3" id="inpimg3">
+                    </div>
+                    <div class="block">
+                      <img width="150" height="100" src="images/choose.jpg" id="newimg4" accept="image/png, image/jpeg"
+                        onerror="this.src='img/500_300.png'">
+                      <input type="file" name="blogo4" id="inpimg4">
+                    </div>
+                    <div class="block">
+                      <img width="150" height="100" src="images/choose.jpg" id="newimg5">
+                      <input type="file" name="blogo5" id="inpimg5">
+                    </div>
+                  </div>
+                </div><br><br>
+                <div class="text-rightbtn">
+                  <button type="submit" class="btn" id="btn1"> <b> Save</b></button>
+                  <button class="btn" id="btn2"><b>Make Changes</b></button>
+                </div>
+              </div>
+            </form>
+          </div>
+  
+  
+        </div>
+      </section>
+</body>
+
+<script type="text/javascript">
+    inpimg.onchange = evt => {
+      const [file] = inpimg.files
+      if (file) {
+        newimg.src = URL.createObjectURL(file)
+      }
+    }
+    inpimg2.onchange = evt => {
+      const [file] = inpimg2.files
+      if (file) {
+        newimg2.src = URL.createObjectURL(file)
+      }
+    }
+    inpimg3.onchange = evt => {
+      const [file] = inpimg3.files
+      if (file) {
+        newimg3.src = URL.createObjectURL(file)
+      }
+    }
+    inpimg4.onchange = evt => {
+      const [file] = inpimg4.files
+      if (file) {
+        newimg4.src = URL.createObjectURL(file)
+      }
+    }
+    inpimg5.onchange = evt => {
+      const [file] = inpimg5.files
+      if (file) {
+        newimg5.src = URL.createObjectURL(file)
+      }
+    }
+  
+    $(document).ready(function () {
+      $("#myform").on('submit', function (event) {
+        event.preventDefault();
+        form = document.getElementById("myform");
+        var formData = new FormData(form);
+        console.log(formData)
+        //var d=$(form).serialize();
+        //console.log(d);
+        $.ajax({
+          url: "admin_data?",
+          data: formData,
+          type: 'POST',
+          success: function (data, textStatus, jqXHR) {
+            if(data=="game created"){
+              alert(data)
+            }
+            else{
+              alert(Error)
+            }
+            //document.getElementById("newimg5").src="images/Rectangle23.png";
+            console.log("success.....")
+            alert("done")
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.log("not bad......")
+            alert("Error from server....")
+          },
+          processData: false,
+          contentType: false,
+        })
+      })
+    })
+  
+    function changeimg() {
+      let n = document.getElementById("back").value;
+      if(n=="custom"){
+        document.getElementById("custome_div").style.display="block"
+      }
+      else{
+        document.getElementById("custome_div").style.display="none"
+        document.getElementById("demo_img").src = "images/" + n + ".png";
+      }
+      
+    }
+  
+  </script>
+
+</html>

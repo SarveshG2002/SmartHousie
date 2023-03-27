@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Galindo&family=Inika&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>Smarthousie</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="Global.js"></script>
+  <script lang="javascript">
+    function set_global_data(data) {
+      set_name(document.getElementById("uname").value);
+      set_promo(document.getElementById("promo").value);
+      set_phone(document.getElementById("phone").value);
+      set_mail(document.getElementById("email").value);
+      set_tickets(data);
+      set_start()
+    }
+    function sel1(arr, start) {
+      set_sel(arr);
+      set_start(start)
+    }
+    function s_start(data) {
+      console.log(data)
+      let start = JSON.parse(data).start_time
+      set_start(start);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main_container" id="main_container">
+    <div class="main">
+      <div class="outline">
+        <div class="form-wrap-bg">
+          <form id="myform">
+            <div class="row-wrap">
+              <img src="images/Frame_9-removebg-preview.png" alt="" width="100%">
+              <input type="text" name="uname" placeholder="Name" id="uname">
+              <input type="text" name="promocode" placeholder="Promocode" id="promo">
+              <input type="tel" id="phone" name="phone" placeholder="Mobile No." id="phone">
+              <input type="email" name="email" placeholder="Email Id" id="email">
+            </div>
+            <a target="_blank" class="play-btn">
+              <button type="submit" class="play">Play</button>
+              <div class="numbers">
+                <div class="no-wraps">
+                  <span class="no-1 red"><span>12</span></span>
+                  <span class="no-2 blue">64</span>
+                </div>
+              </div>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    document.getElementById("uname").focus()
+    $(document).ready(function () {
+      $("#myform").on("submit", function () {
+        event.preventDefault();
+        var form = document.getElementById("myform");
+        var d = $(form).serialize();
+        //console.log(form);
+        if (document.getElementById("phone").value != "" || document.getElementById("uname").value != "" || document.getElementById("promo").value != "") {
+          $.ajax({
+            url: "login_data?",
+            data: d,
+            type: "POST",
+            success: function (data, textStatus, jqXHR) {
+
+              if (data == "This game doesn't exists") {
+                alert(data)
+              }
+              else if (data[0] == "y") {
+                //alert("user allready exist, he choose ticket");
+                console.log()
+                var arr = data.slice(1, data.length - 5)
+                var start = data.slice(data.length - 5, data.length)
+                sel1(arr, start);
+                set_promo(document.getElementById("promo").value);
+                set_name(document.getElementById("uname").value);
+                set_mail(document.getElementById("email").value);
+                load_page()
+                // $("#main_container").load("tempo.html")
+              }
+              else if (data[0] == "z") {
+                //alert("user allready exist, he didn't choose ticket");
+              }
+              else {
+                set_global_data(data);
+                s_start(data);
+                $("#main_container").load("ticket1.html");
+              }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log("not bad")
+            }
+          })
+        }
+        else{
+          alert("Please fill all fields")
+        }
+      })
+    })
+
+    // function load_page(promo) {
+    //   $.ajax({
+    //     url: "load_page?",
+    //     data: { "promo": promo },
+    //     type: "POST",
+    //     success: async function (data, textStatus, jqXHR) {
+    //       console.log("your new func: ", data)
+    //       page = data
+    //       console.log(page)
+    //       // $("#main_container").load(page + ".html");
+          
+    //     },
+    //     error: function (jqXHR, textStatus, errorThrown) {
+    //       console.log("not bad")
+    //     }
+    //   })
+    // }
+
+
+  </script>
+</body>
+
+</html>

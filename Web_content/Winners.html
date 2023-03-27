@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .header {
+            width: 100%;
+            font-family: 'Galindo';
+            font-style: normal;
+            font-size: 45px;
+            color: #2A005F;
+            text-align: center;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .back {
+            font-size: 20px;
+            margin: 10px 0px 0px 15px;
+            box-sizing: border-box;
+        }
+
+        .winner_panel {
+            width: 95%;
+            margin: 35px auto;
+            padding: 10px 0px;
+            background-color: #2A005F;
+            box-sizing: border-box;
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: 20% 40% 40%;
+
+        }
+
+        .title {
+            color: aliceblue;
+            font-size: 25px;
+            margin-left: 0px;
+            border-width: 0px 1px 0px 0px;
+            border-color: aliceblue;
+            border-style: ridge;
+            text-align: center;
+            padding: 15px 0px;
+        }
+
+        .d {
+            background-color: #fdda7f;
+            font-size: 25px;
+            margin-left: 0px;
+            border-width: 0px 1px 0px 0px;
+            border-color: rgb(0, 0, 0);
+            border-style: ridge;
+            text-align: center;
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Smart Housie
+        </div>
+        <div class="back" onclick="getback()">
+            &lt Back
+        </div>
+        <div class="winner_panel">
+            <div class="title">
+                #
+            </div>
+            <div class="title">
+                Prize
+            </div>
+            <div class="title">
+                Winners
+            </div>
+
+            <div class="rank d">
+                1st
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="1">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                2nd
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="2">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                3rd
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="3">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                4th
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="4">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                5th
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="5">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                6th
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="6">
+                Sarvesh
+            </div>
+
+            <div class="rank d">
+                7th
+            </div>
+            <div class="prize d">
+                Prize1
+            </div>
+            <div class="winner d" id="7">
+                Sarvesh
+            </div>
+        </div>
+    </div>
+    <script>
+        function getWinners() {
+            console.log("getting winner...")
+            $.ajax({
+                url: "getWinners?",
+                data: { "promo": get_promo() },
+                type: "POST",
+                success: function (data, textStatus, jqXHR) {
+                    console.log(data)
+                    data = JSON.parse(data)
+                    document.getElementById("1").innerHTML = data["fullhousie1"]
+                    document.getElementById("2").innerHTML = data["fullhousie2"]
+                    document.getElementById("3").innerHTML = data["fullhousie3"]
+
+                    document.getElementById("4").innerHTML = data["first5"]
+                    document.getElementById("5").innerHTML = data["firstLine"]
+                    document.getElementById("6").innerHTML = data["secondLine"]
+                    document.getElementById("7").innerHTML = data["thirdLine"]
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("not bad");
+                }
+            })
+        }
+        function getback() {
+            // document.getElementById("showNumber").style.display = "none";
+            $("#main_container").load("tempo.html");
+
+        }
+        getWinners()
+    </script>
+</body>
+
+</html>

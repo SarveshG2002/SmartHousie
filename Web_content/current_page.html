@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarthousie</title>
+    <style>
+        .container {
+            width: 80%;
+            padding: 20px 0px;
+            box-sizing: border-box;
+            float: right;
+        }
+
+        .game {
+            width: 90%;
+            margin: 10px 0px;
+
+        }
+
+        .gdata:hover {
+            background-color: rgb(251, 243, 233);
+            cursor: pointer;
+        }
+
+        .game img {
+            width: 70%;
+            border-radius: 50%;
+        }
+
+        .promo {
+            margin-top: 20px;
+            font-size: 25px;
+        }
+
+        .gdata {
+       		margin-top: 20px;
+        	padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        	background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 10% auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="game" id="games">
+            Nothing to show here
+        </div>
+    </div>
+    <script>
+        function get_current_game() {
+            $.ajax({
+                url: "get_current_game?",
+                data: {},
+                type: "POST",
+                success: async function (data, textStatus, jqXHR) {
+                    data = JSON.parse(data)
+                    console.log(data)
+                    gdata = data
+                    let markup = ""
+                    for (let i = 0; i < gdata.length; i++) {
+                    	data=gdata[i]
+                    	console.log(data)
+                    	data=data.split("--")
+                        markup = markup + "<div class='gdata' onclick='get_game(" + i + ")'><img src='logos/Google/5087579.png'><div><div class='promo'>" + data[0] + "</div><div class='company'>" + data[1] + "</div></div></div>"
+                    }
+                    console.log(markup)
+                    document.getElementById("games").innerHTML = markup;
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("not bad")
+                }
+            })
+        }
+        function set_all_arr_num(promo) {
+            console.log("yoyoyoyoyoyo")
+            $.ajax({
+                url: "get_current_number_index?",
+                data: { "promo": promo},
+                type: "POST",
+                success: function (data, textStatus, jqXHR) {
+                    //console.log(data)
+                    for (let i = 0; i <= data; i++) {
+                        //console.log(`document.getElementById("x" + {all_arr[i + 1].toString()})`)
+                        //console.log(i, "x" + all_arr["l"][i])
+                        arrive_token.push(all_arr["l"][i])
+                        //document.getElementById("x" + all_arr["l"][i]).style.backgroundColor = "grey";
+                        
+                    }
+                    $('#main_container_admin').load('token_panel.html')
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("not bad");
+                }
+            })
+        }
+        function update_num(i) {
+            console.log(i)
+            $.ajax({
+                url: "get_ran_num?",
+                data: { "promo": i },
+                type: "POST",
+                success: async function (data, textStatus, jqXHR) {
+                    data = JSON.parse(data);
+                    all_arr = data;
+                    //console.log(all_arr)
+                    console.log(data)
+                    set_all_arr_num(i)
+                    
+                    //
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("not bad")
+                }
+            })
+        }
+        function get_game(i) {
+            // console.log(gdata[i])
+            // let cdata=gdata[i]
+            // $.ajax({
+            //     url: "get_about_game?",
+            //     data: { promo: cdata[0] },
+            //     type: "POST",
+            //     success: async function (data, textStatus, jqXHR) {
+            //         console.log("Data of current game: ", data)
+            //         data=JSON.parse(data)
+            //         console.log(data)
+            //         all_num=data
+            //         let markup=""
+            //         // for(let i=0;i<data.length;i++){
+            //         //     markup=markup="<div class='gdata' onclick='get_game("+i+")'><img src='logos/Google/5087579.png'><div><div class='promo'>"+data[i][0]+"</div><div class='company'>"+data[i][1]+"</div></div></div>"
+            //         // }
+            //         // document.getElementById("games").innerHTML=markup;
+            //     },
+            //     error: function (jqXHR, textStatus, errorThrown) {
+            //         console.log("not bad")
+            //     }
+            // })
+            let data=gdata[i]
+            console.log(data)
+            data=data.split("--")
+            promo=data[0]
+            intgration=data[2]
+            console.log(promo,intgration)
+            update_num(promo)
+                
+        }
+        arrive_token=[]
+        get_current_game()
+    </script>
+</body>
+
+</html>

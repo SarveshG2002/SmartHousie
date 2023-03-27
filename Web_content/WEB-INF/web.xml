@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  <servlet>
+  	<servlet-name>admin_data</servlet-name>
+  	<servlet-class>Tambola.Create_game</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admin_data</servlet-name>
+  	<url-pattern>/admin_data</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login_data</servlet-name>
+  	<servlet-class>Tambola.Get_user</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login_data</servlet-name>
+  	<url-pattern>/login_data</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>selected_ticket</servlet-name>
+  	<servlet-class>Tambola.selected_ticket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>selected_ticket</servlet-name>
+  	<url-pattern>/selected_ticket</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>get_ran_num</servlet-name>
+  	<servlet-class>Tambola.get_ran_num</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_ran_num</servlet-name>
+  	<url-pattern>/get_ran_num</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>get_duration</servlet-name>
+  	<servlet-class>Tambola.get_duration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_duration</servlet-name>
+  	<url-pattern>/get_duration</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>update_users_ticket</servlet-name>
+  	<servlet-class>Tambola.update_users_ticket</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>update_users_ticket</servlet-name>
+  	<url-pattern>/update_users_ticket</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>get_arrive_num</servlet-name>
+  	<servlet-class>Tambola.get_arrive_num</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_arrive_num</servlet-name>
+  	<url-pattern>/get_arrive_num</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>get_img_name</servlet-name>
+  	<servlet-class>Tambola.get_img_name</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_img_name</servlet-name>
+  	<url-pattern>/get_img_name</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>get_user_sel_num</servlet-name>
+  	<servlet-class>Tambola.get_user_sel_num</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_user_sel_num</servlet-name>
+  	<url-pattern>/get_user_sel_num</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>get_current_number_index</servlet-name>
+  	<servlet-class>Tambola.get_current_number_index</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_current_number_index</servlet-name>
+  	<url-pattern>/get_current_number_index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>load_page</servlet-name>
+  	<servlet-class>Tambola.load_page</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>load_page</servlet-name>
+  	<url-pattern>/load_page</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>check_win</servlet-name>
+  	<servlet-class>Tambola.check_win</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>check_win</servlet-name>
+  	<url-pattern>/check_win</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>getWinners</servlet-name>
+  	<servlet-class>Tambola.getWinners</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>getWinners</servlet-name>
+  	<url-pattern>/getWinners</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>get_current_game</servlet-name>
+  	<servlet-class>Tambola.get_current_game</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_current_game</servlet-name>
+  	<url-pattern>/get_current_game</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>get_about_game</servlet-name>
+  	<servlet-class>Tambola.get_about_game</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>get_about_game</servlet-name>
+  	<url-pattern>/get_about_game</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>change_intgration</servlet-name>
+  	<servlet-class>Tambola.change_intgration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>change_intgration</servlet-name>
+  	<url-pattern>/change_intgration</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login_signup</servlet-name>
+  	<servlet-class>Tambola.login_signup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login_signup</servlet-name>
+  	<url-pattern>/login_signup</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

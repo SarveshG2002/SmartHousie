@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/smart.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<title>smartHousie</title>
+</head>
+
+<body>
+	<div class="ticket">
+		<div class="border">
+			<div class="row logo" id="log-img">
+				<img src="assets/images/image.png" alt="" width="70%" style="margin-top: 20px;">
+			</div>
+			<div id="bell-icon">
+				<div class="bell-icon">
+					<div id="i-icon"> <a><img src="assets/images/i_icon-removebg-preview.png" alt=""></a> </div>
+					<div id="bell"> <a> <img src="assets/images/bellicon.png" alt="" width="90%"></a></div>
+
+				</div>
+			</div>
+
+			<div class="circle">
+
+				<ul>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="1"
+							onclick="selected_num(1)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="2" onclick="selected_num(2)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="3"
+							onclick="selected_num(3)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="4" onclick="selected_num(4)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="5"
+							onclick="selected_num(5)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="6" onclick="selected_num(6)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="7"
+							onclick="selected_num(7)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="8" onclick="selected_num(8)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="9"
+							onclick="selected_num(9)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="10" onclick="selected_num(10)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="11"
+							onclick="selected_num(11)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="12" onclick="selected_num(12)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="13"
+							onclick="selected_num(13)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="14" onclick="selected_num(14)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="15"
+							onclick="selected_num(15)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="16" onclick="selected_num(16)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="17"
+							onclick="selected_num(17)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="18" onclick="selected_num(18)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="19"
+							onclick="selected_num(19)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="20" onclick="selected_num(20)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="21"
+							onclick="selected_num(21)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="22" onclick="selected_num(22)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="23"
+							onclick="selected_num(23)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="24" onclick="selected_num(24)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="25"
+							onclick="selected_num(25)"></button></li>
+					<li><button class="btn btn-primary btn-circle btn-sm" id="26" onclick="selected_num(26)"></button>
+					</li>
+					<li class="yellow"><button class="btn btn-primary btn-circle btn-sm" id="27"
+							onclick="selected_num(27)"></button></li>
+				</ul>
+			</div>
+
+
+
+			<div id="slideshow">
+				<div class="slide-wrapper">
+					<div class="slide">
+						<img src="assets/images/medical-logo-design-ideas-1.jpg" width="40%" />
+					</div>
+
+					<div class="slide">
+						<img src="assets/images/creative-pharma-logo-design-3.jpg" width="40%" />
+					</div>
+
+					<div class="slide">
+						<img src="assets/images/medical-logo-design-ideas-1.jpg" width="40%" />
+					</div>
+
+					<div class="slide">
+						<img src="assets/images/creative-pharma-logo-design-3.jpg" width="40%">
+					</div>
+
+					<div class="slide">
+						<img src="assets/images/1496061027-901325196592c14631f3d98-58047878-500x500.jpg" width="40%" />
+					</div>
+				</div>
+
+
+
+				<!--<div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>-->
+			</div>
+
+			<div class="cur_token" id="cur_token">
+				0
+			</div>
+			<center>
+				<div>
+					<button class='play' style="color: rgb(167, 167, 167);font-size: 25px;" id="demo"></button>
+				</div>
+			</center>
+
+
+			<div class="AT-btn">
+				<button id="token-btn">
+					<img src="assets/images/TOKEN.png" alt=""></button>
+				<a target="_blank" class="play-btn">
+					<button type="play" class="play" id="claimp"><img src="assets/images/Claim Prize1.png"
+							alt=""></button>
+
+				</a>
+				<button id="award-btn">
+					<img src="assets/images/AWARD.png" alt=""></button>
+			</div>
+
+
+
+
+
+			<div class="row logo">
+				<img src="assets/images/Frame_9-removebg-preview.png" alt="" width="60%" id="sponsor-img">
+			</div>
+		</div>
+
+	</div>
+</body>
+<script>
+	console.log("final page")
+	function sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	}
+	var ticket = JSON.parse(get_sel()[0]);
+	//var current_num;
+	//var all_arr;
+	var status = false;
+	count = 1
+	for (let i = 0; i < 9; i++) {
+		if (ticket[0][i] != 0) {
+			document.getElementById(count.toString()).textContent = ticket[0][i];
+			first_line.push(ticket[0][i])
+		}
+		else {
+			document.getElementById(count.toString()).textContent = "";
+		}
+		count++;
+	}
+	for (let i = 0; i < 9; i++) {
+		if (ticket[1][i] != "0") {
+			document.getElementById(count.toString()).textContent = ticket[1][i];
+			second_line.push(ticket[1][i])
+		}
+		else {
+			document.getElementById(count.toString()).textContent = "";
+		}
+		count++;
+	}
+	for (let i = 0; i < 9; i++) {
+		if (ticket[2][i] != "0") {
+			document.getElementById(count.toString()).textContent = ticket[2][i];
+			third_line.push(ticket[2][i])
+		}
+		else {
+			document.getElementById(count.toString()).textContent = "";
+		}
+
+		count++;
+	}
+
+
+	get_img_name()
+	//Countdown
+
+	//console.log(d.getDate()+" "+months[d.getMonth()]+", "+d.getFullYear())
+	//var countDownDate = new Date("16 dec, 2022 " + get_sel()[1] + ":00").getTime();
+	var countDownDate = new Date(d.getDate() + " " + months[d.getMonth()] + ", " + d.getFullYear() + " " + get_sel()[1] + ":00").getTime();
+	x = setInterval(function () {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		document.getElementById("demo").innerHTML = "<button class='play'>" + days + "d " + hours + "h " + minutes + "m " + seconds + "s " + "</button>";
+		//console.log(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
+		if (distance < 0) {
+			clearInterval(x);
+			set_token()
+			//update_dur();
+			get_user_sel_num()
+			status = true
+			console.log("loading.....")
+			document.getElementById("demo").innerHTML = "<button class='play'><img src='assets/images/Claim Prize.png'></button>";
+		}
+	}, 1000);
+	function get_arrived_num() {
+		$.ajax({
+			url: "get_arrive_num?",
+			data: { "promo": get_promo() },
+			type: "POST",
+			success: async function (data, textStatus, jqXHR) {
+				current_num = data
+				//console.log(current_num)
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log("not bad")
+			}
+		})
+	}
+	function set_token() {
+		let counter = 0
+		let x = setInterval(function () {
+			get_arrived_num()
+			console.log(current_num)
+			document.getElementById("cur_token").innerHTML = current_num;
+			//set_updated_list(data[counter])
+			counter++
+			if (counter >= 90) {
+				clearInterval(x);
+			}
+		}, 5 * 1000)
+	}
+
+	function selected_num(num) {
+		let d = document.getElementById(num).innerHTML;
+		//console.log(get_updated_list().includes(parseInt(d)),d);
+		//console.log("num+d " + num + " " + d)
+		//console.log(d != "" && status)
+		if (user_selected_numbers.includes(parseInt(d))) {
+			console.log("allredy exists")
+		}
+		else {
+			if (d != "" && status) {
+				console.log(num, " ", get_name(), " ", get_mail());
+				$.ajax({
+					url: "update_users_ticket?",
+					data: { "num": d, "promo": get_promo(), "mail": get_mail(), "name": get_name() },
+					type: "POST",
+					success: async function (data, textStatus, jqXHR) {
+						console.log(data)
+						if (data == "got") {
+							document.getElementById(num).style.backgroundColor = "grey";
+							user_selected_numbers.push(parseInt(d))
+							console.log("checking for winners")
+							check_for_win()
+
+						}
+						else {
+							console.log(data)
+						}
+					},
+					error: function (jqXHR, textStatus, errorThrown) {
+						console.log("not bad")
+					}
+				})
+			}
+		}
+	}
+
+
+	function get_user_sel_num() {
+		//console.log("getting old data")
+		$.ajax({
+			url: "get_user_sel_num?",
+			data: { "promo": get_promo(), "mail": get_mail(), "name": get_name() },
+			type: "POST",
+			success: function (data, textStatus, jqXHR) {
+				//console.log(data)
+				if (data != "0" && data != "error") {
+					data = data.split("-");
+					//console.log(data)
+					for (let x = 1; x <= 27; x++) {
+						console.log(data.includes(document.getElementById(x).innerHTML))
+						if (data.includes(document.getElementById(x).innerHTML)) {
+							document.getElementById(x).style.backgroundColor = "grey";
+							user_selected_numbers.push(parseInt(document.getElementById(x).innerHTML))
+						}
+					}
+				}
+
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log("not bad");
+			}
+		})
+	}
+
+	function getAllNum() {
+		// $.ajax({
+		// 	url: "get_ran_num?",
+		// 	data: { "promo": get_promo() },
+		// 	type: "POST",
+		// 	success: function (data, textStatus, jqXHR) {
+		// 		console.log(data)
+
+		// 	},
+		// 	error: function (jqXHR, textStatus, errorThrown) {
+		// 		console.log("not bad");
+		// 	}
+		// })
+		$("#main_container").load("token_new.html");
+	}
+	function check_for_win() {
+		console.log(user_selected_numbers.length == 15)
+		if ((user_selected_numbers.length == 15)) {
+			console.log("you got fullhousie")
+			isefd = "done"
+			check_for_full_housie("Fullhousie1")
+			//iWin()
+		}
+		if ((user_selected_numbers.length == 5) && isefd == "") {
+			console.log("you got early 5")
+			isefd = "done"
+			iWin("First5")
+		}
+		if (isSubset(user_selected_numbers, first_line) && isfld == "") {
+			console.log("you got first line")
+			isfld = "done"
+			iWin("FirstLine")
+		}
+		if (isSubset(user_selected_numbers, second_line) && issld == "") {
+			console.log("you got second line")
+			issld = "done"
+			iWin("SecondLine")
+		}
+		if (isSubset(user_selected_numbers, third_line) && istld == "") {
+			console.log("you got third line")
+			istld = "done"
+			iWin("ThirdLine")
+		}
+
+	}
+	function isSubset(a, b) {
+		return b.every(value => a.includes(value));
+	}
+	function check_for_full_housie(apply) {
+		$.ajax({
+			url: "check_win?",
+			data: { "promo": get_promo(), "apply": apply, "email": get_mail(), "name": get_name() },
+			type: "POST",
+			success: function (data, textStatus, jqXHR) {
+				console.log(data)
+				console.log(apply)
+				alert(data)
+				if (data == "You are not first one to claim award for " + apply && apply == "Fullhousie1") {
+					check_for_full_housie("Fullhousie2")
+				}
+				else if (data == "You are not first one to claim award for " + apply && apply == "Fullhousie2") {
+					check_for_full_housie("Fullhousie3")
+				}
+				else if (data == "You are not first one to claim award for " + apply && apply == "Fullhousie3") {
+					alert("Every award has gone")
+				}
+
+				set_token()
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log("not bad");
+			}
+		})
+	}
+	function iWin(apply) {
+		console.log("sending winner to ")
+		$.ajax({
+			url: "check_win?",
+			data: { "promo": get_promo(), "apply": apply, "email": get_mail(), "name": get_name() },
+			type: "POST",
+			success: function (data, textStatus, jqXHR) {
+				alert(data)
+				set_token()
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log("not bad");
+			}
+		})
+	}
+	function get_img_name() {
+		$.ajax({
+			url: "get_img_name?",
+			data: { "promo": Gpromo },
+			type: "POST",
+			success: async function (data, textStatus, jqXHR) {
+				//console.log(data)
+				data = data.slice(1, (data.length - 1))
+				data = data.split(",")
+				console.log(data)
+				let markup = "";
+				let cname = data[data.length - 2].trim()
+				let temp
+				for (let x = 1; x < (data.length - 2); x++) {
+					temp = data[x].trim()
+					markup = markup + "<div class='slide'><img src='logos/" + cname + "/" + temp + "' width='30% '></div>"
+				}
+				console.log(markup)
+				document.getElementById("slide-wrapper").innerHTML = markup
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				console.log("not bad")
+			}
+		})
+	}
+
+</script>
+
+
+</html>
